@@ -81,18 +81,21 @@ export const portfolio = [
     name: "Lemonide Tech",
     type: "Brand & Platform",
     color: "#e7c84e",
+    img: "/images/work-1.jpg",
   },
   {
     year: "2025",
     name: "Viper Studio",
     type: "AI Product Design",
     color: "#5ad1c4",
+    img: "/images/work-2.jpg",
   },
   {
     year: "2025",
     name: "Million One",
     type: "Web Experience",
     color: "#c8a8ff",
+    img: "/images/work-3.jpg",
   },
 ];
 
@@ -189,12 +192,12 @@ export const process = [
 ];
 
 export const team = [
-  { name: "Arlene McCoy", role: "Co-Founder, CEO" },
-  { name: "Lena Williams", role: "Co-Founder, CTO" },
-  { name: "Maya Johnson", role: "Senior Developer" },
-  { name: "Zara Patel", role: "Chief Operations Officer" },
-  { name: "Emma Davis", role: "Chief Product Officer" },
-  { name: "Chloe Anderson", role: "Senior Product Designer" },
+  { name: "Arlene McCoy", role: "Co-Founder, CEO", img: "/images/team-1.jpg" },
+  { name: "Lena Williams", role: "Co-Founder, CTO", img: "/images/team-2.jpg" },
+  { name: "Maya Johnson", role: "Senior Developer", img: "/images/team-3.jpg" },
+  { name: "Zara Patel", role: "Chief Operations Officer", img: "/images/team-4.jpg" },
+  { name: "Emma Davis", role: "Chief Product Officer", img: "/images/team-5.jpg" },
+  { name: "Chloe Anderson", role: "Senior Product Designer", img: "/images/team-6.jpg" },
 ];
 
 export const comparison = {
@@ -220,36 +223,42 @@ export const testimonials = [
       "Nubien rebuilt our entire funnel with AI personalization. Conversions jumped 38% in the first month.",
     name: "John Smith",
     role: "CEO, Innovate Solutions",
+    img: "/images/avatar-1.jpg",
   },
   {
     quote:
       "The chatbot they shipped handles 70% of our support load. It genuinely sounds like our brand.",
     name: "Emily Davis",
     role: "Product Manager, Nexus Digital",
+    img: "/images/avatar-2.jpg",
   },
   {
     quote:
       "Working with this team felt like adding a world-class AI department overnight.",
     name: "David Lee",
     role: "Founder, GreenLeaf Enterprises",
+    img: "/images/avatar-3.jpg",
   },
   {
     quote:
       "Beautiful design backed by serious engineering. Rare combination, exactly what we needed.",
     name: "Mark Thompson",
     role: "Creative Director, PixelWorks Studio",
+    img: "/images/avatar-4.jpg",
   },
   {
     quote:
       "Their predictive models cut our inventory waste nearly in half. The ROI was immediate.",
     name: "Brian Clark",
     role: "Team Lead, Mandro Designs",
+    img: "/images/avatar-5.jpg",
   },
   {
     quote:
       "From discovery to deploy in six weeks. Fast, sharp and genuinely delightful to work with.",
     name: "Daniel Carter",
     role: "Founder, Fusion Studios",
+    img: "/images/avatar-6.jpg",
   },
 ];
 

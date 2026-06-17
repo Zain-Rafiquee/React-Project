@@ -1,0 +1,56 @@
+.cta__panel {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid var(--line-hi);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, var(--bg-soft), var(--bg-card));
+  padding: clamp(48px, 8vw, 100px) clamp(24px, 6vw, 80px);
+  text-align: center;
+}
+.cta__glow {
+  width: 600px;
+  height: 600px;
+  bottom: -380px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+}
+.cta__grid-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 50px 50px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 80% at 50% 100%, #000, transparent 70%);
+  mask-image: radial-gradient(ellipse 70% 80% at 50% 100%, #000, transparent 70%);
+  opacity: 0.5;
+}
+.cta__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.cta__rating {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+.cta__title { max-width: 17ch; }
+.cta__sub { max-width: 50ch; }
+.cta__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+@media (max-width: 560px) {
+  .cta__actions { width: 100%; }
+  .cta__actions .btn { flex: 1; justify-content: center; }
+}

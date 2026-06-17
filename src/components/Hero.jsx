@@ -42,7 +42,17 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        <motion.div className="hero__marquee" custom={4} variants={fadeUp} initial="hidden" animate="show">
+        <motion.div className="hero__showcase" custom={4} variants={fadeUp} initial="hidden" animate="show">
+          <div className="hero__window">
+            <div className="hero__window-bar">
+              <span /><span /><span />
+              <em>nubien.studio / dashboard</em>
+            </div>
+            <img src="/images/hero.jpg" alt="Nubien AI dashboard preview" />
+          </div>
+        </motion.div>
+
+        <motion.div className="hero__marquee" custom={5} variants={fadeUp} initial="hidden" animate="show">
           <span className="hero__marquee-label">Powering teams at</span>
           <div className="marquee">
             <div className="marquee__track">
