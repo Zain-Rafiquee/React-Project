@@ -1,0 +1,104 @@
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+  transition: background 0.4s var(--ease), border-color 0.4s var(--ease),
+    backdrop-filter 0.4s var(--ease);
+  border-bottom: 1px solid transparent;
+}
+.nav.is-scrolled {
+  background: rgba(8, 9, 10, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom-color: var(--line);
+}
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 74px;
+}
+.nav__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+.nav__mark {
+  color: var(--accent);
+  font-size: 14px;
+  filter: drop-shadow(0 0 8px var(--accent-glow));
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  font-size: 15px;
+}
+.nav__links a {
+  color: var(--text-dim);
+  transition: color 0.25s var(--ease);
+  position: relative;
+}
+.nav__links a:hover { color: var(--text); }
+.nav__cta-mobile { display: none; }
+
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+.nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+}
+.nav__burger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__burger.is-open span:nth-child(2) { opacity: 0; }
+.nav__burger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 880px) {
+  .nav__cta { display: none; }
+  .nav__burger { display: flex; }
+  .nav__cta-mobile { display: inline-flex; }
+
+  .nav__links {
+    position: fixed;
+    inset: 74px 0 auto 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 24px var(--pad) 32px;
+    background: rgba(8, 9, 10, 0.96);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s var(--ease), opacity 0.35s var(--ease);
+  }
+  .nav__links.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav__links a {
+    font-size: 20px;
+    padding: 10px 0;
+    font-family: var(--font-display);
+    color: var(--text);
+  }
+  .nav__cta-mobile { margin-top: 14px; }
+}
